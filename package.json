@@ -1,0 +1,30 @@
+{
+  "name": "pretty-html-log",
+  "version": "1.0.0",
+  "description": "pretty-html-log is a npm module that pretty prints a raw html string to the console. It indents and highlights your code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kreuzerk/pretty-html-log.git"
+  },
+  "keywords": [
+    "console",
+    "log",
+    "pretty",
+    "print",
+    "highlight",
+    "HTML"
+  ],
+  "author": "Kevin Kreuzer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kreuzerk/pretty-html-log/issues"
+  },
+  "homepage": "https://github.com/kreuzerk/pretty-html-log#readme",
+  "dependencies": {
+    "chalk": "^2.4.2"
+  }
+}
