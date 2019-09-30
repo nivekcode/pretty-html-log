@@ -4,14 +4,13 @@ import {colorDefinitions} from '../themes/github';
 
 export class HighlightEngine {
 
-    private buffer = '';
-    private result = '';
-
-    // TODO use the parsing rules directly
-    private languageDefinition: any = htmlParsingRules;
+    private buffer: string;
+    private result: string;
+    private languageDefinition;
     private colorFunc;
 
     public highlight(value: string) {
+        this.languageDefinition = htmlParsingRules;
         this.result = '';
         this.buffer = '';
         try {
