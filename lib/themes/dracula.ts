@@ -1,6 +1,6 @@
 import {Theme} from './theme.model';
 
-export const dracula: Theme = {
+export const DRACULA_THEME: Theme = {
     doctag: "#fffafe",
     meta: '#7f7f7f',
     comment: '#6272a4',

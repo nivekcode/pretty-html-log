@@ -1,6 +1,6 @@
 import chalk from 'chalk';
 import {htmlParsingRules} from './html-parsing-rules';
-import {dracula} from '../themes/dracula';
+import {Theme} from '../themes/theme.model';
 
 export class HighlightEngine {
 
@@ -8,8 +8,10 @@ export class HighlightEngine {
     private result: string;
     private languageDefinition;
     private colorFunc;
+    private theme: Theme;
 
-    public highlight(value: string) {
+    public highlight(value: string, theme: Theme) {
+        this.theme = theme;
         try {
             return this.processHTML(value);
         } catch (exception) {
@@ -80,7 +82,7 @@ export class HighlightEngine {
             this.result += this.colorFunc(this.processKeywords());
 
             if(this.processKeywords() === '>'){
-                this.colorFunc = chalk.hex(dracula.tagContent);
+                this.colorFunc = chalk.hex(this.theme.tagContent);
             }
         }
         this.buffer = '';
@@ -157,7 +159,7 @@ export class HighlightEngine {
     }
 
     private addCodePart(classname) {
-        this.colorFunc = chalk.hex(dracula[classname]);
+        this.colorFunc = chalk.hex(this.theme[classname]);
         return '';
     }
 
