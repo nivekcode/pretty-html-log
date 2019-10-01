@@ -1,26 +1,29 @@
-export const colorDefinitions = {
-  tag: {
-    color: "#60dd79"
-  },
-  name: {
-    color: "#ff3b3b"
-  },
-  attr: {
-    color: "#5254e5"
-  },
-  string: {
-    color: "#6efbff"
-  },
-  keyword: {
-    color: "#3f55ff"
-  },
-  number: {
-    color: "#ff6879"
-  },
-  built_in: {
-    color: "#ff6879"
-  },
-  comment: {
-    color: "#22ff1e"
-  }
+import {Theme} from './theme.model';
+
+export const colorDefinitions: Theme = {
+    doctag: {
+        color: "#d14"
+    },
+    meta: {
+        color: '#999',
+        fontWeight: 'bold'
+    },
+    comment: {
+        color: '#998',
+        fontStyle: 'italic'
+    },
+    tag: {
+        color: '#000000',
+        fontWeight: 'normal'
+    },
+    attr: {
+        color: '#6f42c1'
+    },
+    string: {
+        color: '#032f62'
+    },
+    name: {
+        color: '#22863a',
+        fontWeight: 'normal'
+    }
 };

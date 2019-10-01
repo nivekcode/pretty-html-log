@@ -1,6 +1,6 @@
 import chalk from 'chalk';
 import {htmlParsingRules} from './html-parsing-rules';
-import {colorDefinitions} from '../themes/github';
+import {dracula} from '../themes/dracula';
 
 export class HighlightEngine {
 
@@ -10,21 +10,20 @@ export class HighlightEngine {
     private colorFunc;
 
     public highlight(value: string) {
-        this.languageDefinition = htmlParsingRules;
-        this.result = '';
-        this.buffer = '';
         try {
-            this.processHTML(value);
-            return this.result;
-        } catch (e) {
-            if (e.message && e.message.indexOf('Illegal') !== -1) {
+            return this.processHTML(value);
+        } catch (exception) {
+            if (exception.message && exception.message.indexOf('Illegal') !== -1) {
                 return escape(value);
             }
-            throw e;
+            throw exception;
         }
     }
 
-    private processHTML(value: string) {
+    private processHTML(value: string): string {
+        this.languageDefinition = htmlParsingRules;
+        this.result = '';
+        this.buffer = '';
         let match;
         let count;
         let index = 0;
@@ -38,18 +37,19 @@ export class HighlightEngine {
             index = match.index + count;
         }
         this.processLexeme(value.substr(index));
+        return this.result;
     }
 
-    private isIllegal(lexeme, mode) {
+    private isIllegal(lexeme, mode): boolean {
         return this.testRe(mode.illegalRe, lexeme);
     }
 
-    private keywordMatch(mode, match) {
+    private keywordMatch(mode, match): boolean {
         const match_str = match[0].toLowerCase();
         return mode.keywords.hasOwnProperty(match_str) && mode.keywords[match_str];
     }
 
-    private processKeywords() {
+    private processKeywords(): string {
         let keyword_match, last_index, match, result;
 
         if (!(this.languageDefinition as any).keywords) {
@@ -75,9 +75,13 @@ export class HighlightEngine {
         return result + this.buffer.substr(last_index);
     }
 
-    private processBuffer() {
+    private processBuffer(): void {
         if (this.colorFunc) {
             this.result += this.colorFunc(this.processKeywords());
+
+            if(this.processKeywords() === '>'){
+                this.colorFunc = chalk.hex(dracula.tagContent);
+            }
         }
         this.buffer = '';
     }
@@ -125,9 +129,6 @@ export class HighlightEngine {
             }
         }
         do {
-            if ((this.languageDefinition as any).className) {
-                this.colorFunc = chalk.hex(colorDefinitions['tag'].color);
-            }
             this.languageDefinition = this.languageDefinition.parent;
         } while (this.languageDefinition !== end_mode.parent);
         if (end_mode.starts) {
@@ -156,7 +157,7 @@ export class HighlightEngine {
     }
 
     private addCodePart(classname) {
-        this.colorFunc = chalk.hex(colorDefinitions[classname].color);
+        this.colorFunc = chalk.hex(dracula[classname]);
         return '';
     }
 
