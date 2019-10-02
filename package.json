@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "format:check": "prettier --list-different '{lib,showcase,bin}/**/*.ts'",
     "format:write": "prettier --write '{lib,showcase,bin}/**/*.ts'"
   },
