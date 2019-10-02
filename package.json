@@ -4,7 +4,9 @@
   "description": "pretty-html-log is a npm module that pretty prints a raw html string to the console. It indents and highlights your code.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "format:check": "prettier --list-different '{lib,showcase,bin}/**/*.ts'",
+    "format:write": "prettier --write '{lib,showcase,bin}/**/*.ts'"
   },
   "repository": {
     "type": "git",
