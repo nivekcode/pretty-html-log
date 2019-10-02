@@ -6,8 +6,15 @@ export class HighlightEngine {
 
     private buffer: string;
     private result: string;
-    private languageDefinition;
-    private colorFunc;
+    private languageDefinition: {
+        contains: any;
+        compiled?: boolean;
+        lexemesRe?: RegExp;
+        relevance?: number;
+        terminators: any;
+        parent?: any;
+    } | undefined;
+    private colorFunc: ((value: string) => void) | undefined;
     private theme: Theme;
 
     public highlight(value: string, theme: Theme) {
@@ -42,11 +49,11 @@ export class HighlightEngine {
         return this.result;
     }
 
-    private isIllegal(lexeme, mode): boolean {
+    private isIllegal(lexeme: string, mode: any): boolean {
         return this.testRe(mode.illegalRe, lexeme);
     }
 
-    private keywordMatch(mode, match): boolean {
+    private keywordMatch(mode: any, match: string[]): string[] {
         const match_str = match[0].toLowerCase();
         return mode.keywords.hasOwnProperty(match_str) && mode.keywords[match_str];
     }
@@ -88,12 +95,12 @@ export class HighlightEngine {
         this.buffer = '';
     }
 
-    private startNewMode(mode, something ?: any) {
+    private startNewMode(mode: any, something ?: any) {
         this.result += mode.className ? this.addCodePart(mode.className) : '';
         this.languageDefinition = Object.create(mode, {parent: {value: this.languageDefinition}});
     }
 
-    private processLexeme(buffer, lexeme ?: any) {
+    private processLexeme(buffer: string, lexeme ?: any) {
         this.buffer += buffer;
         if (lexeme == null) {
             this.processBuffer();
@@ -117,7 +124,7 @@ export class HighlightEngine {
         return lexeme.length || 1;
     }
 
-    private processEndMode(lexeme: any, end_mode) {
+    private processEndMode(lexeme: any, end_mode: any) {
         const origin: any = this.languageDefinition;
         if (origin.skip) {
             this.buffer += lexeme;
@@ -131,6 +138,10 @@ export class HighlightEngine {
             }
         }
         do {
+            const className = (this.languageDefinition as any).className;
+            if (className && className !== 'tag') {
+                this.colorFunc = chalk.hex(this.theme['tag']);
+            }
             this.languageDefinition = this.languageDefinition.parent;
         } while (this.languageDefinition !== end_mode.parent);
         if (end_mode.starts) {
@@ -142,7 +153,7 @@ export class HighlightEngine {
         return origin.returnEnd ? 0 : lexeme.length;
     }
 
-    private processNewMode(new_mode, lexeme: any) {
+    private processNewMode(new_mode: any, lexeme: any) {
         if (new_mode.skip) {
             this.buffer += lexeme;
         } else {
@@ -158,7 +169,7 @@ export class HighlightEngine {
         return new_mode.returnBegin ? 0 : lexeme.length;
     }
 
-    private addCodePart(classname) {
+    private addCodePart(classname: string) {
         this.colorFunc = chalk.hex(this.theme[classname]);
         return '';
     }
