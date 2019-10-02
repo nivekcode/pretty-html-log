@@ -7,6 +7,8 @@ describe('Highlight engine', () => {
     const htmlString = '<html><h1 class="test">Test</h1></html>';
     let sut: HighlightEngine;
 
+    const countOccurences = (string, word) => string.split(word).length - 1;
+
     beforeEach(() => {
         sut = new HighlightEngine();
     });
@@ -55,15 +57,8 @@ describe('Highlight engine', () => {
 
     it('should print Test in the Dracula tagContent color', () => {
         const highlightedHTML = sut.highlight(htmlString, THEMES.DRACULA);
-        const colorizedOpeningTag = chalk.hex(THEMES.DRACULA.tagContent)('"test"');
+        const colorizedOpeningTag = chalk.hex(THEMES.DRACULA.tagContent)('Test');
         expect(countOccurences(highlightedHTML, colorizedOpeningTag)).toBe(1);
     });
-
-
-
-
-    function countOccurences(string, word) {
-        return string.split(word).length - 1;
-    }
 
 });
