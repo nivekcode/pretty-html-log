@@ -20,14 +20,7 @@ export class HighlightEngine {
 
   public highlight(value: string, theme: Theme) {
     this.theme = theme;
-    try {
-      return this.processHTML(value);
-    } catch (exception) {
-      if (exception.message && exception.message.indexOf('Illegal') !== -1) {
-        return escape(value);
-      }
-      throw exception;
-    }
+    return this.processHTML(value);
   }
 
   private processHTML(value: string): string {
@@ -48,10 +41,6 @@ export class HighlightEngine {
     }
     this.processLexeme(value.substr(index));
     return this.result;
-  }
-
-  private isIllegal(lexeme: string, mode: any): boolean {
-    return this.testRe(mode.illegalRe, lexeme);
   }
 
   private keywordMatch(mode: any, match: string[]): string[] {
@@ -119,33 +108,14 @@ export class HighlightEngine {
     if (end_mode) {
       return this.processEndMode(lexeme, end_mode);
     }
-
-    if (this.isIllegal(lexeme, this.languageDefinition))
-      throw new Error(
-        'Illegal lexeme "' +
-          lexeme +
-          '" for mode "' +
-          ((this.languageDefinition as any).className || '<unnamed>') +
-          '"'
-      );
-
-    this.buffer += lexeme;
-    return lexeme.length || 1;
   }
 
   private processEndMode(lexeme: any, end_mode: any) {
     const origin: any = this.languageDefinition;
-    if (origin.skip) {
+    if (!(origin.returnEnd || origin.excludeEnd)) {
       this.buffer += lexeme;
-    } else {
-      if (!(origin.returnEnd || origin.excludeEnd)) {
-        this.buffer += lexeme;
-      }
-      this.processBuffer();
-      if (origin.excludeEnd) {
-        this.buffer = lexeme;
-      }
     }
+    this.processBuffer();
     do {
       const className = (this.languageDefinition as any).className;
       if (className && className !== 'tag') {
