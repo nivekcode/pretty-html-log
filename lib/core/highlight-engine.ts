@@ -43,10 +43,6 @@ export class HighlightEngine {
     return this.result;
   }
 
-  private isIllegal(lexeme: string, mode: any): boolean {
-    return this.testRe(mode.illegalRe, lexeme);
-  }
-
   private keywordMatch(mode: any, match: string[]): string[] {
     const match_str = match[0].toLowerCase();
     return mode.keywords.hasOwnProperty(match_str) && mode.keywords[match_str];
@@ -116,17 +112,10 @@ export class HighlightEngine {
 
   private processEndMode(lexeme: any, end_mode: any) {
     const origin: any = this.languageDefinition;
-    if (origin.skip) {
+    if (!(origin.returnEnd || origin.excludeEnd)) {
       this.buffer += lexeme;
-    } else {
-      if (!(origin.returnEnd || origin.excludeEnd)) {
-        this.buffer += lexeme;
-      }
-      this.processBuffer();
-      if (origin.excludeEnd) {
-        this.buffer = lexeme;
-      }
     }
+    this.processBuffer();
     do {
       const className = (this.languageDefinition as any).className;
       if (className && className !== 'tag') {
