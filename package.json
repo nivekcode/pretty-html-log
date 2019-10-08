@@ -48,7 +48,7 @@
     }
   },
   "bin": {
-    "node-command-line-starter": "./src/bin/order.bin.js",
-    "restaurant": "./src/bin/order.bin.js"
+    "pretty-html-log": "./bin/prettty-html-log.bin.ts",
+    "phl": "./bin/prettty-html-log.bin.ts"
   }
 }
