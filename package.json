@@ -32,7 +32,9 @@
     "prettier": "^1.18.2"
   },
   "devDependencies": {
+    "@types/node": "^12.7.11",
     "@types/jest": "^24.0.18",
+    "commander": "^3.0.2",
     "husky": "^3.0.8",
     "jest": "^24.9.0",
     "pretty-quick": "^1.11.1",
@@ -44,5 +46,9 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
+  },
+  "bin": {
+    "pretty-html-log": "./bin/prettty-html-log.bin.ts",
+    "phl": "./bin/prettty-html-log.bin.ts"
   }
 }
