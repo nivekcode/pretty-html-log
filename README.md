@@ -9,18 +9,11 @@ There are two ways to use pretty-html-log
 1. Use it in your typescript / javascript code
 2. Use it via command line or in your npm scripts
 
-<div class="panel panel-info">
-**☝️ If you use it via command line tool you can always directly execute
-the bin with npx:**
-<div class="panel-body">
-```
-npx pretty-html-log '<html><h1 class="test"></h1></html>'
-```
-or use the shortcut syntax
+> ☝️ If you use it via command line tool you can always directly execute
+> the bin with npx:
 
-```
-npx phl '<html><h1 class="test"></h1></html>'
-```
+>       npx pretty-html-log '<html><h1 class="test"></h1></html>'
+>
+> or use the shortcut syntax
 
-</div>
-</div>
+>       npx phl '<html><h1 class="test"></h1></html>'
