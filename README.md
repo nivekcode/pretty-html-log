@@ -1,6 +1,6 @@
 # Pretty HTML log
 
-![Logo](https://raw.githubusercontent.com/kreuzerk/pretty-html-log/master/assets/pretty-html-log-logo_black.png)
+![Logo](https://raw.githubusercontent.com/kreuzerk/pretty-html-log/master/assets/phl-logo-black.png)
 
 # Getting started
 
