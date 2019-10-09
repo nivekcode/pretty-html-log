@@ -1,4 +1,4 @@
-_coming soon - work in progress_
+**coming soon - work in progress**
 
 # Pretty HTML log
 
