@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
+    "bump-version": "rjp package.json version $VERSION",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "report:coverage": "npm run test:coverage && codecov",
@@ -34,6 +35,9 @@
     "prettier": "^1.18.2"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^3.0.1",
+    "@semantic-release/exec": "^3.3.2",
+    "@semantic-release/git": "^7.0.6",
     "@types/jest": "^24.0.18",
     "@types/node": "^12.7.11",
     "codecov": "^3.6.1",
@@ -41,6 +45,7 @@
     "husky": "^3.0.8",
     "jest": "^24.9.0",
     "pretty-quick": "^1.11.1",
+    "replace-json-property": "^1.4.1",
     "ts-jest": "^24.1.0",
     "ts-node": "^8.4.1",
     "typescript": "^3.6.3"
