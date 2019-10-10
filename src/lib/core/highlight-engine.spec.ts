@@ -6,7 +6,12 @@ describe('Highlight engine', () => {
   const htmlString = '<html><h1 class="test">Test</h1></html>';
   let sut: HighlightEngine;
 
-  const countOccurences = (string, word) => string.split(word).length - 1;
+  const countOccurences = (highlightedHTML, word) => {
+    console.log('HiglightedHTML', highlightedHTML);
+    console.log('HiglightedHTML', highlightedHTML);
+    const count = highlightedHTML.split(word).length - 1;
+    return count;
+  };
 
   beforeEach(() => {
     sut = new HighlightEngine();
@@ -15,7 +20,6 @@ describe('Highlight engine', () => {
   it('should print the two opening tags (<) in the Dracula tag color', () => {
     const highlightedHTML = sut.highlight(htmlString, THEMES.DRACULA);
     const colorizedOpeningTag = chalk.hex(THEMES.DRACULA.tag)('<');
-    console.log(highlightedHTML);
     expect(countOccurences(highlightedHTML, colorizedOpeningTag)).toBe(2);
   });
 
