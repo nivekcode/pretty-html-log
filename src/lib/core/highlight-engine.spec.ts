@@ -24,6 +24,8 @@ describe('Highlight engine', () => {
     expect(countOccurences(highlightedHTML, colorizedOpeningTag)).toBe(2);
   });
 
+  /*
+
   it('should print the two opening close tags (</) in the Dracula tag color', () => {
     const highlightedHTML = sut.highlight(htmlString, THEMES.DRACULA);
     const colorizedOpeningTag = chalk.hex(THEMES.DRACULA.tag)('</');
@@ -65,4 +67,5 @@ describe('Highlight engine', () => {
     const colorizedOpeningTag = chalk.hex(THEMES.DRACULA.tagContent)('Test');
     expect(countOccurences(highlightedHTML, colorizedOpeningTag)).toBe(1);
   });
+   */
 });
