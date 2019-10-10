@@ -1,5 +1,3 @@
-#coming soon - work in progress
-
 # Pretty HTML log
 
 ![Logo](https://raw.githubusercontent.com/kreuzerk/pretty-html-log/master/src/assets/phl-logo-black.png)
