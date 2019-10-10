@@ -48,7 +48,7 @@
     }
   },
   "bin": {
-    "pretty-html-log": "./bin/prettty-html-log.bin.ts",
-    "phl": "./bin/prettty-html-log.bin.ts"
+    "pretty-html-log": ".src/bin/prettty-html-log.bin.ts",
+    "phl": "./src/bin/prettty-html-log.bin.ts"
   }
 }
