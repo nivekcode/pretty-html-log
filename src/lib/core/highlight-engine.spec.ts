@@ -15,6 +15,7 @@ describe('Highlight engine', () => {
   it('should print the two opening tags (<) in the Dracula tag color', () => {
     const highlightedHTML = sut.highlight(htmlString, THEMES.DRACULA);
     const colorizedOpeningTag = chalk.hex(THEMES.DRACULA.tag)('<');
+    console.log('ColorizedOpeningTag', colorizedOpeningTag);
     expect(countOccurences(highlightedHTML, colorizedOpeningTag)).toBe(2);
   });
 
