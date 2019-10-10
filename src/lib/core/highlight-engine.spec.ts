@@ -8,7 +8,7 @@ describe('Highlight engine', () => {
 
   const countOccurences = (highlightedHTML, word) => {
     console.log('HiglightedHTML', highlightedHTML);
-    console.log('HiglightedHTML', highlightedHTML);
+    console.log('word', word);
     const count = highlightedHTML.split(word).length - 1;
     console.log('Count', count);
     return count;
