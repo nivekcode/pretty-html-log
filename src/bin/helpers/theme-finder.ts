@@ -3,7 +3,7 @@ import { THEMES } from '../../lib/themes/themes';
 import chalk from 'chalk';
 import { phlLog } from './logger';
 
-export const findTheme = (theme: string): Theme => {
+export const findTheme = (theme: string = 'dracula'): Theme => {
   switch (theme) {
     case 'material':
       return THEMES.MATERIAL;

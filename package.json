@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
+    "prebuild": "npm run copy:readme",
     "bump-version": "rjp package.json version $VERSION",
+    "copy:readme": "copyfiles ./README.md ./dist",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "report:coverage": "npm run test:coverage && codecov",
