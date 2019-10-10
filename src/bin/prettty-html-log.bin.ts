@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import * as packgeJSON from '../package.json';
+import * as packgeJSON from '../../package.json';
 import commander from 'commander';
 import { highlight } from '../lib/pretty-html-log';
 import { printHelp } from './help-menu';

@@ -4,8 +4,10 @@
   "description": "pretty-html-log is a npm module that pretty prints a raw html string to the console. It indents and highlights your code.",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "test": "jest",
     "test:coverage": "jest --coverage",
+    "report:coverage": "npm run test:coverage && codecov",
     "format:check": "prettier --list-different '{lib,showcase,bin}/**/*.ts'",
     "format:write": "prettier --write '{lib,showcase,bin}/**/*.ts'"
   },
@@ -32,8 +34,9 @@
     "prettier": "^1.18.2"
   },
   "devDependencies": {
-    "@types/node": "^12.7.11",
     "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.11",
+    "codecov": "^3.6.1",
     "commander": "^3.0.2",
     "husky": "^3.0.8",
     "jest": "^24.9.0",
