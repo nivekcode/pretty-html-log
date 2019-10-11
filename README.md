@@ -107,5 +107,5 @@ pretty-html-log -h
 # Credits
 
 The core alogrithm is taken from [highlight.js](https://github.com/highlightjs/highlight.js).
-Even though it has been rewritten to specifically support HTML and not all languages.
-Furthermore the code of pretty-html-log is written in Typescript and optimized for HTML highlighting in the console.
+The algorithm from highlight has been rewritten in this module to specifically support HTML and not all languages.
+Therefore the engine is much smaller. Furthermore the code of pretty-html-log is written in Typescript and optimized for HTML highlighting in the console.
