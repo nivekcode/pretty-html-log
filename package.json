@@ -1,6 +1,6 @@
 {
   "name": "pretty-html-log",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "pretty-html-log is a npm module that pretty prints a raw html string to the console. It indents and highlights your code.",
   "main": "index.js",
   "scripts": {
@@ -12,11 +12,12 @@
     "test:coverage": "jest --coverage",
     "report:coverage": "npm run test:coverage && codecov",
     "format:check": "prettier --list-different '{lib,showcase,bin}/**/*.ts'",
-    "format:write": "prettier --write '{lib,showcase,bin}/**/*.ts'"
+    "format:write": "prettier --write '{lib,showcase,bin}/**/*.ts'",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kreuzerk/pretty-html-log.git"
+    "url": "https://github.com/kreuzerk/pretty-html-log.git"
   },
   "keywords": [
     "console",
@@ -51,7 +52,8 @@
     "replace-json-property": "^1.4.1",
     "ts-jest": "^24.1.0",
     "ts-node": "^8.4.1",
-    "typescript": "^3.6.3"
+    "typescript": "^3.6.3",
+    "semantic-release": "^15.13.24"
   },
   "husky": {
     "hooks": {

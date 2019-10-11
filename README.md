@@ -1,6 +1,25 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+**Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Pretty HTML log
 
 ![Logo](https://raw.githubusercontent.com/kreuzerk/pretty-html-log/master/src/assets/phl-logo-black.png)
+
+- [Getting started 🚀](#getting-started-)
+- [API](#api)
+  - [Themes 🎨](#themes-)
+- [Usage over Javascript / Typescript 👨‍💻](#usage-over-javascript--typescript-%E2%80%8D)
+  - [Simple usage](#simple-usage)
+  - [Choose your theme](#choose-your-theme)
+- [Use as Script 📜](#use-as-script-)
+  - [Simple usage](#simple-usage-1)
+  - [Choose your theme](#choose-your-theme-1)
+  - [Help menu](#help-menu)
+- [Credits](#credits)
 
 # Getting started 🚀
 
