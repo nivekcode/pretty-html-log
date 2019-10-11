@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/kreuzerk/pretty-html-log/compare/v1.0.0...v1.0.1) (2019-10-11)
+
+
+### Bug Fixes
+
+* **command:** fix path to bin file ([b79b23f](https://github.com/kreuzerk/pretty-html-log/commit/b79b23f2d3b789b23b8d57d05d6d2dae30387346))
+
 # 1.0.0 (2019-10-11)
 
 
