@@ -96,7 +96,16 @@ Of course you don't have to remember those commands - theres a help menu availab
 can use at any point to look up the docs.
 
 Simply type
-![](https://raw.githubusercontent.com/kreuzerk/pretty-html-log/master/src/assets/phl-script-help.png)
+
+```
+pretty-html-log --help
+```
+
+or
+
+```
+pretty-html-log -h
+```
 
 # Credits
 
