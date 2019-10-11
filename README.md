@@ -42,12 +42,6 @@ npm install pretty-html-log
 npx pretty-html-log '<html><h1 class="test"></h1></html>'
 ```
 
-or use the shortcut syntax
-
-```
-npx phl '<html><h1 class="test"></h1></html>'
-```
-
 # API
 
 - **htmlString** **_(required)_** a raw html string
@@ -101,12 +95,6 @@ To just pretty print and highlight a HTML string simply type the following comma
 pretty-html-log "<html><body><h1 class="foo">Text</h1></body></html>"
 ```
 
-or use the shortcut syntax
-
-```
-phl "<html><body><h1 class="foo">Text</h1></body></html>"
-```
-
 ## Choose your theme
 
 The command line tool also allows you to choose your theme. Simply use -t or --theme and pass
@@ -119,13 +107,6 @@ one of the following strings as an argument:
 ```
 pretty-html-log "<html><body><h1 class="foo">Text</h1></body></html>" -t vscode
 pretty-html-log "<html><body><h1 class="foo">Text</h1></body></html>" --theme=vscode
-```
-
-or with the shorter command
-
-```
-phl "<html><body><h1 class="foo">Text</h1></body></html>" -t vscode
-phl "<html><body><h1 class="foo">Text</h1></body></html>" --theme=vscode
 ```
 
 ## Help menu

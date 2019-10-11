@@ -61,7 +61,6 @@
     }
   },
   "bin": {
-    "pretty-html-log": "./src/bin/prettty-html-log.bin.js",
-    "phl": "./src/bin/prettty-html-log.bin.js"
+    "pretty-html-log": "./src/bin/prettty-html-log.bin.js"
   }
 }
