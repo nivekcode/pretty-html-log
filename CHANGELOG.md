@@ -1,3 +1,11 @@
+## [1.0.3](https://github.com/kreuzerk/pretty-html-log/compare/v1.0.2...v1.0.3) (2019-10-11)
+
+
+### Bug Fixes
+
+* **bin:** add missing commander dependency ([1e0dffd](https://github.com/kreuzerk/pretty-html-log/commit/1e0dffd8dd70e421274e304d5f42971f762ce2ca))
+* **bin:** remove shorthand command ([d18a874](https://github.com/kreuzerk/pretty-html-log/commit/d18a874cf1d5b7f3f6907a528e711a388806efe9))
+
 ## [1.0.2](https://github.com/kreuzerk/pretty-html-log/compare/v1.0.1...v1.0.2) (2019-10-11)
 
 
