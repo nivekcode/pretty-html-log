@@ -68,7 +68,6 @@ _pretty-html-log_.
 
 The highlight function also accepts a theme as a second optional argument.
 A theme can be imported and then passed to the module.
-
 ![](https://raw.githubusercontent.com/kreuzerk/pretty-html-log/master/src/assets/phl-theme-usage.png)
 
 # Use as Script 📜
@@ -79,7 +78,6 @@ or maybe you want to just pretty print a string over the console.
 ## Simple usage
 
 To just pretty print and highlight a HTML string simply type the following command:
-
 ![](https://raw.githubusercontent.com/kreuzerk/pretty-html-log/master/src/assets/phl-simple-script-usage.png)
 
 ## Choose your theme
@@ -90,8 +88,7 @@ one of the following strings as an argument:
 - vscode
 - material
 - dracula
-
-![](https://raw.githubusercontent.com/kreuzerk/pretty-html-log/master/src/assets/phl-theme-usage-script.png)
+  ![](https://raw.githubusercontent.com/kreuzerk/pretty-html-log/master/src/assets/phl-theme-usage-script.png)
 
 ## Help menu
 
@@ -99,7 +96,6 @@ Of course you don't have to remember those commands - theres a help menu availab
 can use at any point to look up the docs.
 
 Simply type
-
 ![](https://raw.githubusercontent.com/kreuzerk/pretty-html-log/master/src/assets/phl-script-help.png)
 
 # Credits
