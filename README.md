@@ -1,31 +1,17 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Pretty HTML log](#pretty-html-log)
-- [Getting started 🚀](#getting-started-)
-- [API](#api)
-  - [Themes 🎨](#themes-)
-- [Usage over Javascript or Typescript 👨‍💻](#usage-over-javascript-or-typescript-%E2%80%8D)
-  - [Simple usage](#simple-usage)
-  - [Choose your theme](#choose-your-theme)
-- [Use as Script 📜](#use-as-script-)
-  - [Simple usage](#simple-usage-1)
-  - [Choose your theme](#choose-your-theme-1)
-  - [Help menu](#help-menu)
-- [Credits](#credits)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # Pretty HTML log
 
 ![Logo](https://raw.githubusercontent.com/kreuzerk/pretty-html-log/master/src/assets/phl-logo-white.png)
 
 pretty-html-log is a tool that allows you to highlight and pretty print your html string to console.
 
+- [Pretty HTML log](#pretty-html-log)
 - [Getting started 🚀](#getting-started-)
 - [API](#api)
   - [Themes 🎨](#themes-)
-- [Usage over Javascript / Typescript 👨‍💻](#usage-over-javascript--typescript-%E2%80%8D)
+- [Usage over Javascript or Typescript 👨‍💻](#usage-over-javascript-or-typescript-%E2%80%8D)
   - [Simple usage](#simple-usage)
   - [Choose your theme](#choose-your-theme)
 - [Use as Script 📜](#use-as-script-)
