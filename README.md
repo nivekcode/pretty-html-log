@@ -116,7 +116,7 @@ To set it up you simply once need to execute the following function:
 addConsoleLogPrettyHtml();
 ```
 
-_Sample places to execute this function are: app.module or jest.config etc... / depends on your need and your framework_
+_Sample places to execute this function are: app.module or jest.setup.ts etc... / depends on your need and your framework_
 
 Once you executed the _addConsoleLogPrettyHtml_ function you can simply use the following code to pretty print your HTML string to console.
 
