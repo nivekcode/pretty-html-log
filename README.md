@@ -18,6 +18,7 @@ pretty-html-log is a tool that allows you to highlight and pretty print your htm
   - [Simple usage](#simple-usage-1)
   - [Choose your theme](#choose-your-theme-1)
   - [Help menu](#help-menu)
+- [Extend your console with console.logPrettyHTML](#extend-your-console-with-console.logPrettyHTML)
 - [Credits](#credits)
 
 # Getting started 🚀
