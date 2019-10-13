@@ -7,7 +7,7 @@
 
 pretty-html-log is a tool that allows you to highlight and pretty print your html string to console.
 
-![pretty html log demo](https://raw.githubusercontent.com/kreuzerk/pretty-html-log/master/src//assets/phl-preview.png)
+![pretty html log demo](https://raw.githubusercontent.com/kreuzerk/pretty-html-log/master/src/assets/phl-preview.png)
 
 - [Pretty HTML log](#pretty-html-log)
 - [Getting started 🚀](#getting-started-)
