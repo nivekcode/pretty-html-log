@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/kreuzerk/pretty-html-log/compare/v1.0.3...v1.0.4) (2019-10-11)
+
+
+### Bug Fixes
+
+* **docs:** release new docs ([940a0eb](https://github.com/kreuzerk/pretty-html-log/commit/940a0eb97d2968c8699e5a059aa6bc1149d2d35b))
+
 ## [1.0.3](https://github.com/kreuzerk/pretty-html-log/compare/v1.0.2...v1.0.3) (2019-10-11)
 
 
