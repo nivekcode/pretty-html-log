@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/kreuzerk/pretty-html-log/compare/v1.0.4...v1.0.5) (2019-10-15)
+
+
+### Bug Fixes
+
+* **browsersupport:** use standalone prettier ([cbcab09](https://github.com/kreuzerk/pretty-html-log/commit/cbcab096a588d830fd09a72035e42f655e59707c))
+
 ## [1.0.4](https://github.com/kreuzerk/pretty-html-log/compare/v1.0.3...v1.0.4) (2019-10-11)
 
 
