@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/kreuzerk/pretty-html-log/compare/v1.0.5...v1.0.6) (2019-10-17)
+
+
+### Bug Fixes
+
+* **theme:** export theme model ([2c950d8](https://github.com/kreuzerk/pretty-html-log/commit/2c950d812ab723b0f9fd161b1341657eaa8ed20d))
+
 ## [1.0.5](https://github.com/kreuzerk/pretty-html-log/compare/v1.0.4...v1.0.5) (2019-10-15)
 
 
