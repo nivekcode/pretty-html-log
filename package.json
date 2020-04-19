@@ -1,6 +1,6 @@
 {
   "name": "pretty-html-log",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "pretty-html-log is a npm module that pretty prints a raw html string to the console. It indents and highlights your code.",
   "main": "index.js",
   "scripts": {

@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/kreuzerk/pretty-html-log/compare/v1.1.0...v1.1.1) (2020-04-19)
+
+
+### Bug Fixes
+
+* **deps:** update deps and fix vulnerabilities ([f2fc94e](https://github.com/kreuzerk/pretty-html-log/commit/f2fc94e692bb4bc48b7d6087e9554188ca66dda5))
+
 # [1.1.0](https://github.com/kreuzerk/pretty-html-log/compare/v1.0.6...v1.1.0) (2020-04-19)
 
 
