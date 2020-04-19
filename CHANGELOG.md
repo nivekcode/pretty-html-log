@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/kreuzerk/pretty-html-log/compare/v1.0.6...v1.1.0) (2020-04-19)
+
+
+### Features
+
+* **prettier:** use prettier config if available ([2b63635](https://github.com/kreuzerk/pretty-html-log/commit/2b636355277a7feb0692528ed5182d74b505b981))
+
 ## [1.0.6](https://github.com/kreuzerk/pretty-html-log/compare/v1.0.5...v1.0.6) (2019-10-17)
 
 
