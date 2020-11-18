@@ -53,7 +53,7 @@
     "ts-jest": "^24.1.0",
     "ts-node": "^8.4.1",
     "typescript": "^3.6.3",
-    "semantic-release": "^15.13.24"
+    "semantic-release": "^17.2.3"
   },
   "husky": {
     "hooks": {
